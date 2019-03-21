@@ -1,0 +1,42 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="~/favicon.ico" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="gray-bg">
+    <div class="loginContent animated fadeIn" id="init" style="display:none;">
+        <div class="login-name">{{name}}</div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input v-model="user" type="text" class="form-control" placeholder="User" v-on:keyup.enter="Login()"></input>
+        </div>
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <input v-model="password" onkeypress="capLock(event)" type="password" class="form-control" placeholder="Password" v-on:keyup.enter="Login()"></input>
+        </div>
+        <button v-on:click="Login()" class="btn btn-primary block full-width btn-sm" data-style="slide-down">Login</button>
+        <div id="mayus" style="color:#9E9E9E;">Bloq Mayús está activo</div>
+        <p class="m-t">
+            <small>
+                <strong>Copyright</strong>Derechos Reservados. V 1.0.0.0
+            </small>
+        </p>
+    </div>
+    <script src="~/lib/vue.js" ></script>
+    <script src="~/lib/axios.min.js" ></script>
+    <script src="~/js/global.js" ></script>
+    <script src="~/js/login.js" ></script>
+</body>
+</html>     

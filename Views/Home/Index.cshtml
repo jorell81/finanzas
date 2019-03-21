@@ -1,8 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Inicio";
+    ViewBag.Detalle = "asd";
+    ViewBag.Modulo = "asd";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>Titulo</h5>
+                <div class="ibox-tools tooltip-basic">
+                    <span data-toggle="tooltip" data-placement="top" title="Refrescar Listado">
+                        <button type="button" class="btn btn-primary btn-xs" ><i class="fa fa-refresh"></i> Refrescar</button>
+                    </span>
+                </div>
+            </div>
+            <div class="ibox-content">
+                contenido
+            </div>
+        </div>
+    </div>
 </div>
